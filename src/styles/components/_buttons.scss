@@ -1,0 +1,149 @@
+.btn {
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-radius: 0.3rem;
+  color: $light;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+.btn-red {
+  background-color: $red;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darken($color: $red, $amount: 10);
+  }
+}
+
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}
+
+.btn-slider {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  background-color: transparent;
+  padding: 0;
+
+  &.learn-more {
+    width: 100%;
+
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 2rem;
+      height: 2rem;
+      background-color: $red;
+      border-radius: 0.3rem;
+
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: $light;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+          left: 0.1rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: absolute;
+      top: 9px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: $primary;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &:disabled {
+    .circle {
+      background-color: darken($color: $light, $amount: 15);
+    }
+    .button-text {
+      color: darken($color: $light, $amount: 15);
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background-color: white;
+          transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: white;
+    }
+  }
+}
+
+.google-btn {
+  align-items: center;
+  background-color: white;
+  border-radius: 0.3rem;
+
+  justify-content: space-between;
+  display: flex;
+
+  .google-icon-wrapper {
+    max-width: 45px;
+    max-height: 45px;
+    padding: 0.2rem;
+  }
+  .btn-text {
+    text-decoration: none;
+    color: $light;
+    margin: 0;
+    cursor: pointer;
+    padding-right: 1rem;
+    transition: color 0.5s ease-in-out;
+    &:hover {
+      color: $blue;
+    }
+  }
+}

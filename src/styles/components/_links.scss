@@ -1,0 +1,13 @@
+.link {
+  text-decoration: none;
+  display: block;
+  color: $primary;
+  font-weight: 400;
+
+  span {
+    font-weight: 600;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

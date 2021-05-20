@@ -1,0 +1,52 @@
+.notes__main {
+  display: flex;
+  flex-direction: column;
+
+  &-bar {
+    align-items: center;
+    background-color: $primary;
+    color: $light;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+  }
+}
+
+.notes__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+.notes__title,
+.notes__textarea {
+  border: none;
+}
+
+.notes__title {
+  color: $primary;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  outline-color: $red;
+  transition: outline-color 0.5s ease-in-out;
+  &:focus {
+    outline-color: #fcc4c4;
+  }
+}
+.notes__textarea {
+  color: $primary;
+  height: 50vh;
+  outline-color: $red;
+  transition: outline-color 0.5s ease-in-out;
+  &:focus {
+    outline-color: #fcc4c4;
+  }
+}
+
+.notes__img {
+  box-shadow: 3px 4px 11px -4px rgba(0, 0, 0, 0.85);
+  width: 400px;
+}
