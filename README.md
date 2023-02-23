@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">Blog with posts and logs with google firebase</h4>
+<h4 align="center">Blog with posts and logs using google firebase</h4>
 
 ## Key Features
 
