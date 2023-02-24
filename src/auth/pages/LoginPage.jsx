@@ -13,9 +13,9 @@ export const LoginPage = () => {
           <InputComponent label="Password" type="password" placeholder="mail@mail.com" />
           <Grid container spacing={2} sx={{ mb: 1 }}>
             <ButtonComponent value="Login" />
-            <ButtonComponent icon={true} value="Google" />
+            <ButtonComponent googleIcon={true} value="Google" />
           </Grid>
-          <LinkComponent textLink="Register Account" path={'/auth/register'} />
+          <LinkComponent text="Create an" textLink="Account" path={'/auth/register'} />
         </Grid>
       </form>
     </AuthLayout>

@@ -1,10 +1,11 @@
-import { Grid, Link } from '@mui/material';
+import { Grid, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
-export const LinkComponent = ({ textLink, path }) => {
+export const LinkComponent = ({ text, textLink, path }) => {
   return (
     <Grid container direction="row" justifyContent="end">
-      <Link component={RouterLink} color="secondary" to={path}>
+      <Typography sx={{ mr: 0.6 }}>{text}</Typography>
+      <Link sx={{ fontWeight: 700 }} component={RouterLink} color="secondary" to={path}>
         {textLink}
       </Link>
     </Grid>
