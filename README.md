@@ -12,5 +12,5 @@
 ## Key Features
 
 - React V18
-- Material UI
+- Material UI V5
 - FireBase Google

@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+
 import { RouterApp } from './router/RouterApp';
+import { AppTheme } from './theme';
 
 export const JournalApp = () => {
   return (
-    <BrowserRouter>
+    <AppTheme>
       <RouterApp />
-    </BrowserRouter>
+    </AppTheme>
   );
 };
