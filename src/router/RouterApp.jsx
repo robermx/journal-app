@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { AuthRoutes } from '../auth/routes/AuthRoutes';
-import { JournalRoutes } from '../journal/routes/JournalRoutes';
+import { JournalRoutes } from '../main/routes/JournalRoutes';
 
 export const RouterApp = () => {
   return (
