@@ -1,5 +1,4 @@
 import { Grid } from '@mui/material';
-import { deepPurple } from '@mui/material/colors';
 
 export const AuthLayout = ({ children }) => {
   return (
@@ -13,7 +12,12 @@ export const AuthLayout = ({ children }) => {
     >
       <Grid
         item
-        sx={{ backgroundColor: deepPurple[50], padding: 2, borderRadius: 2, width: { sm: 450 } }}
+        sx={{
+          backgroundColor: 'background.light',
+          padding: 2,
+          borderRadius: 2,
+          width: { sm: 450 },
+        }}
       >
         {children}
       </Grid>

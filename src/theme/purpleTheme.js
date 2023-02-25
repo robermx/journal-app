@@ -1,16 +1,20 @@
 import { createTheme } from '@mui/material';
-import { red } from '@mui/material/colors';
+import { deepPurple, indigo, red } from '@mui/material/colors';
 
 export const purpleTheme = createTheme({
   palette: {
     primary: {
-      main: '#262254',
+      main: indigo[900],
     },
     secondary: {
-      main: '#543884',
+      main: deepPurple.A700,
     },
     error: {
       main: red.A400,
+    },
+    background: {
+      light: indigo[50],
+      dark: indigo[900],
     },
   },
 });
